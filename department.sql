@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "friends" (id integer primary key,firstname text, lastname text, email text, birthday text, width integer, weight integer, department_id integer, height integer);
+INSERT INTO "friends" VALUES(1,'Slava','Berlioz','berlioz@gmail.com',NULL,NULL,65,1,165);
+INSERT INTO "friends" VALUES(2,'Michael','Shavlyuk','shavlyuk@mail.ru',NULL,NULL,59,1,195);
+INSERT INTO "friends" VALUES(3,'Andrew','Andruxovich','adnruxovish@gmail.com',NULL,NULL,80,1,185);
+INSERT INTO "friends" VALUES(4,'Andrew','Moshko','moshko@gmail.com',NULL,NULL,80,2,190);
+INSERT INTO "friends" VALUES(7,'Zinaida','Davydova','Kudelya@gmail.com',NULL,NULL,60,2,160);
+INSERT INTO "friends" VALUES(8,'Euhenia','Davydova','jenechka@gmail.com',NULL,NULL,61,3,170);
+CREATE TABLE department(id_dprt integer, name text, idptr integer);
+INSERT INTO "department" VALUES(1,'NorthWood',NULL);
+INSERT INTO "department" VALUES(2,'RedForest',NULL);
+INSERT INTO "department" VALUES(3,'FrostSands',NULL);
+COMMIT;
